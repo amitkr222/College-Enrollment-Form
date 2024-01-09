@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Enrollment Page</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+        <header>
+            <h3>College Enrollment Form</h3>
+        </header>
+        <div class="content">
+            <div class="row">
+                <div class=" col-6 student-form-container">
+                    
+                    <form onsubmit="return validate(this);">
+                        <table>
+                            <tr>
+                                <td><label for="studentName">Name</label></td>
+                                <td><input type="text" id="studentName"></td>
+                                <td><span style="visibility: hidden;" class="errorMessage" id="nameError">Invalid Name</span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="studentEmail">Email</label></td>
+                                <td><input type="email" id="studentEmail"></td>
+                                <td><span style="visibility: hidden;" class="errorMessage" id="emailError">Invalid Email</span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="studentWebsite">Website</label></td>
+                                <td><input type="text" id="studentWebsite"></td>
+                                <td><span style="visibility: hidden;" class="errorMessage" id="websiteError">Invalid Website</span></td>
+                            </tr>
+                            <tr>
+                                <td><label for="studentImageLink">Image Link</label></td>
+                                <td><input type="text" id="studentImageLink"></td>
+                                <td><span style="visibility: hidden;" class="errorMessage" id="imageLinkError">Invalid Link</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Gender</span></td>
+                                <td>
+                                    <input type="radio" id="genderMale" name="studentGender" value="male" checked>
+                                    <label for="male">Male</label><br>
+                                    <input type="radio" id="genderFemale" name="studentGender" value="female">
+                                    <label for="female">Female</label>
+                                </td>
+                                <td><span style="visibility: hidden;" class="errorMessage" id="genderError">Choose a Gender</span></td>
+                            </tr>
+                            <tr>
+                                <td><span>Skills</span></td>
+                                <td>
+                                    <input type="checkbox" id="java" name="studentSkills" value="java" checked>
+                                    <label for="java">Java</label>
+                                    <input type="checkbox" id="html" name="studentSkills" value="html">
+                                    <label for="html">HTML</label>
+                                    <input type="checkbox" id="css" name="studentSkills" value="css">
+                                    <label for="css">CSS</label>
+                            </td>
+                            <td><span style="visibility: hidden;" class="errorMessage" id="skillsError">Choose a Skill</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Enroll Student" id="enrollButton">
+                                    <input type="button" value="Clear" id="clearButton" onclick="clearData()">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class=" col-6 student-detail-table-container">
+                    <h4>Enrolled Students</h4>
+                    <table id="studentDetailTable">
+                          <tr>
+                            <th class="studentDetailCell">Description</th>
+                            
+                            <th class="tableImage">Image</th>
+                          </tr>
+
+                      </table>
+
+                     
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h6>Copyright @2024</h6>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+

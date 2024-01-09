@@ -1,0 +1,266 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+header {
+    background-color: #48d7aa;
+    height: 60px;
+    border: 1px solid black;
+}
+
+header h3 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: red;
+    margin-left: 10px;
+}
+
+.content {
+    min-height: 520px;
+}
+
+.student-form-container {
+    min-height: 520px;
+    border: 1px solid rgb(247, 246, 246);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.student-form-container form {
+    margin-top: 100px;
+}
+
+.student-form-container td {
+    padding-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 0.5px solid #767676;
+    border-radius: 3px;
+}
+
+#enrollButton {
+    background-color: #0185fc;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: white;
+    margin: 15px 15px 0px 0px;
+}
+
+#clearButton {
+    background-color: #e12844;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: white;
+}
+
+.student-detail-table-container:before {
+    content: '';
+    position: absolute;
+    background-color: #48d7aa;
+    width: 5px;
+    height: 505px;
+    margin-left: -15px;
+    margin-top: 5rem;
+    border-radius: 5rem;
+}
+
+.student-detail-table-container {
+    min-height: 520px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.student-detail-table-container h4 {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 126px;
+}
+
+.student-detail-table-container table {
+    margin-top: 50px;
+    margin-left: 7vw;
+    margin-bottom: 50px;
+}
+
+.student-detail-table-container td,
+th {
+    border: 2px solid #bbc58c;
+}
+
+.student-detail-table-container th {
+    background-color: #a7c941;
+    color: white;
+}
+
+.student-detail-table-container tr:nth-child(odd) {
+    background-color: #ebf2d3;
+}
+
+.studentDetailCell {
+    min-width: 20em;
+}
+
+.tableImage {
+    min-width: 10em;
+}
+
+.tableImage img {
+    height: 127px;
+    margin-left: 1em;
+    width: 136px;
+}
+
+footer {
+    height: 25px;
+    background-color: #48d7aa;
+    border: 1px solid black;
+    margin-top: 156px;
+}
+
+footer h6 {
+    color: white;
+    text-align: center;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+@media (max-width: 1193px) {
+    .row {
+        display: inline;
+    }
+
+    .student-form-container {
+        min-height: 520px;
+        border: 1px solid rgb(247, 246, 246);
+        display: flex;
+        justify-content: center;
+        margin-left: 345px;
+        margin-top: -20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    .student-detail-table-container h4 {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 500px;
+    }
+
+    .student-detail-table-container table {
+        margin-top: 35px;
+        margin-left: 28vw;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 821px) {
+    .row {
+        display: inline;
+    }
+
+    .student-form-container {
+        min-height: 520px;
+        border: 1px solid rgb(247, 246, 246);
+        display: flex;
+        justify-content: center;
+        margin-left: 242px;
+        margin-top: -23px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    .student-detail-table-container h4 {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 357px;
+    }
+
+    .student-detail-table-container table {
+        margin-top: 35px;
+        margin-left: 19vw;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 566px) {
+    header {
+        background-color: #48d7aa;
+        height: 60px;
+        border: 1px solid black;
+        width: 342%;
+    }
+
+    footer {
+        height: 25px;
+        background-color: #48d7aa;
+        border: 1px solid black;
+        margin-top: 204px;
+        width: 330%;
+    }
+
+    .student-detail-table-container h4 {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin-left: 231px;
+    }
+}
+
+tr .studentDetailCell div {
+    animation: fadeIn 6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tableImage img {
+    animation: fadeIn 6s;
+}
